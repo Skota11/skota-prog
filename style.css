@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Poppins:wght@700&display=swap");
+
+* {
+  font-family: "poppins", "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  color: black;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: none;
+  resize: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  color: blue;
+}
+body {
+  animation-name: fadeInAnime; /*1で解説*/
+  animation-fill-mode: backwards; /*2で解説*/
+  animation-duration: 0.4s; /*3で解説*/
+  animation-timing-function: ease; /*5で解説*/
+  animation-delay: 0.5s; /*6で解説*/
+  animation-direction: normal; /*7で解説*/
+  overflow-x: hidden;
+}
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  back-ground-color: transparent;
+  margin: 0;
+}
+header > #nav_top > a {
+  color: white;
+  font-size: 1.3rem;
+}
+header ul li {
+  padding: 1%;
+
+  float: right;
+}
+header ul {
+  margin: 0;
+  list-style: none;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  margin: 0;
+  background: linear-gradient(
+    137deg,
+    #0095ff 0%,
+    #0095ff 50%,
+    orange 50%,
+    orange 100%
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3%;
+}
+.hdrdiv {
+  margin-top: 1.3rem;
+  padding: 1%;
+}
+h1 {
+  display: inline-block;
+  border-bottom: solid;
+  font-size: 40px;
+  color: #0093D0;
+}
+#mylink {
+  margin-right: 50px;
+  font-size: 20px;
+  text-align: center;
+  color: #57B299;
+  text-decoration: none;
+}
+#mylink:hover {
+  transition: all 0.2s;
+  color: royalblue;
+}
+#nav_top {
+  margin-top: 15px;
+  float: left;
+}
+#nav_top a {
+  margin-top: 15px;
+  margin-left: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+main {
+  margin-left: 20px;
+}
+#ifame {
+  float: left;
+}
+
+/*リンクの形状*/
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 	background:#04c745; */
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+p {
+  margin-top: 20px;
+}
+.link {
+  margin-top: 15px;
+  color: white;
+}
+#aboutme {
+  width: 100%;
+  float: left;
+}
+#copyright {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+  height: 50px;
+  text-align: center;
+}
+h2 {
+  display: inline-block;
+  border-bottom: solid 5px orange;
+}
+header a {
+  transition: all 0.2s;
+  font-weight: bold;
+  color: #ff8800;
+  font-size: 20px;
+}
+header a:hover {
+  color: #804501;
+}
+.bolder {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.link img {
+  margin: 0 20px 0 0;
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+}
+.link a {
+  margin-bottom: 15px;
+}
+#my_logo {
+  width: 80px;
+}
